@@ -1,19 +1,19 @@
 # Multimodal-VW-MRI-MRI-and-CT-Classifier
 
-This project involves building a deep learning model to classify medical images using a multimodal approach. The images include volumetric MRIs (3D), regular 2D MRIs, and CT scans, and the goal is to integrate these three modalities into a single model for improved classification performance. 
+This project involves building a deep learning model to classify medical images using a multimodal approach. The images include Vessel Wall MRIs (3D), regular 2D MRIs, and CT scans, and the goal is to integrate these three modalities into a single model for improved classification performance. 
 
 ## (As I didn't have access to the datasets, I wrote the code without running it.)
 
 Here's a detailed breakdown of the project:
 
 ### 1. **Data Preparation:**
-   - The project starts with reading and organizing image data from three different directories: volumetric MRI (VW MRI), regular MRI, and CT scans.
+   - The project starts with reading and organizing image data from three different directories: Vessel Wall MRI (VW MRI), regular MRI, and CT scans.
    - A CSV file contains the filenames of the images and their corresponding labels (the class each image belongs to).
    - Three lists are created to store the paths to the images for each modality: VW MRI, regular MRI, and CT scans.
    - The data is stored in a dictionary format, where each entry has paths to the three types of images and their associated label.
 
 ### 2. **Transforms:**
-   - **3D VW MRI Transform**: A series of transformations are applied to the volumetric (3D) MRI data, including adding a channel dimension, scaling intensity values, resizing the image to a fixed size (128x128x64), and converting it to a tensor.
+   - **3D VW MRI Transform**: A series of transformations are applied to the Vessel Wall MRI data, including adding a channel dimension, scaling intensity values, resizing the image to a fixed size (128x128x64), and converting it to a tensor.
    - **2D MRI & CT Transform**: Similar transformations are applied to the 2D MRI and CT images, but the spatial size is reduced to 128x128 since these are 2D images.
 
 ### 3. **Multimodal Dataset:**
